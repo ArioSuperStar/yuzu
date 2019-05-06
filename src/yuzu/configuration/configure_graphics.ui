@@ -78,6 +78,7 @@
          </widget>
         </item>
         <layout class="QHBoxLayout" name="horizontalLayout_fpsmode">
+        <item>
          <widget class="QCheckBox" name="force_30fps_mode">
           <property name="text">
            <string>Force 30 FPS mode</string>
