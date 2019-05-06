@@ -26,8 +26,8 @@
 
 namespace Service::NVFlinger {
 
-int auto frame_ticks = (Core::Timing::BASE_CLOCK_RATE / 60);
-int auto frame_ticks_30fps = (Core::Timing::BASE_CLOCK_RATE / Settings::values.fps_mode);
+constexpr auto frame_ticks = static_cast<s64>(Core::Timing::BASE_CLOCK_RATE / 60);
+long long unsigned int frame_ticks_30fps = (Core::Timing::BASE_CLOCK_RATE / Settings::values.fps_mode);
 
 NVFlinger::NVFlinger(Core::Timing::CoreTiming& core_timing) : core_timing{core_timing} {
     displays.emplace_back(0, "Default");
